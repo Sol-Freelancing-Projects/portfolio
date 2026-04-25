@@ -2,7 +2,7 @@
 import { Send } from "lucide-react";
 
 export default function Footer() {
-  const email = "hello@yourdomain.com";
+  const email = "shlomoyounger1@gmail.com";
 
   const handleClick = () => {
     navigator.clipboard.writeText(email);
@@ -10,7 +10,7 @@ export default function Footer() {
   };
 
   return (
-    <section className="px-6 pb-16 bg-[#05070B]">
+    <section className="px-6 pb-16 bg-[#05070B]" id="contact">
       <div className="max-w-4xl mx-auto text-center">
 
         {/* TITLE */}

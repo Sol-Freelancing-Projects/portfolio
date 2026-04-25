@@ -8,7 +8,7 @@ export default function Projects() {
   ];
 
   return (
-    <section className="px-6 pb-24 bg-[#05070B]">
+    <section className="px-6 pb-24 bg-[#05070B]" id="projects">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
 
         {/* LEFT - LIST */}

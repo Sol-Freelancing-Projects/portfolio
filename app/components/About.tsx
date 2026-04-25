@@ -1,3 +1,10 @@
+import {
+  Code2,
+  ShieldCheck,
+  Zap,
+  Star
+} from "lucide-react";
+
 export default function About() {
   return (
     <section id="about" className="py-24 px-6 bg-[#05070B] text-white">
@@ -23,7 +30,7 @@ export default function About() {
               <div className="relative mb-4">
                 <div className="absolute inset-0 rounded-full blur-xl bg-[#F5B301]/30" />
                 <img
-                  src="/profile.jpg"
+                  src="/assets/pic.png"
                   className="relative w-28 h-28 rounded-full border-2 border-[#F5B301]"
                 />
               </div>
@@ -42,11 +49,20 @@ export default function About() {
             </div>
 
             {/* ICON ROW */}
-            <div className="grid grid-cols-4 gap-6 mt-8 text-center text-xs text-gray-400">
-              <div>💻</div>
-              <div>🛡️</div>
-              <div>⚡</div>
-              <div>⭐</div>
+            <div className="grid grid-cols-4 gap-6 mt-8 text-center">
+
+              {[Code2, ShieldCheck, Zap, Star].map((Icon, i) => (
+                <div
+                  key={i}
+                  className="flex items-center justify-center w-10 h-10 mx-auto rounded-lg 
+                 bg-[#0F141A] border border-[#1A1F26]
+                 hover:border-[#F5B301] hover:bg-[#F5B301]/10
+                 transition "
+                >
+                  <Icon className="w-5 h-5 text-[#F5B301] cursor-pointer" />
+                </div>
+              ))}
+
             </div>
 
             {/* STATS */}
