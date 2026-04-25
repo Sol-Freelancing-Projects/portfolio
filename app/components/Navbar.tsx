@@ -3,18 +3,31 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
     <header className="w-full fixed top-0 z-50 bg-[#0B0F14]/80 backdrop-blur-md border-b border-[#1A1F26]">
-      
+
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        
+
         {/* LOGO */}
-        <Link href="#home" className="text-lg font-semibold text-white">
+        {/* <Link href="#home" className="text-lg font-semibold text-white">
           Champ<span className="text-[#F5B301]">.now</span>
+        </Link> */}
+       
+
+        <Link href="#home" className="flex items-center gap-3">
+
+          <Image
+            src="/assets/logo.png"
+            alt="Champ logo"
+            width={28}
+            height={28}
+          />
+
         </Link>
 
         {/* RIGHT SIDE */}
@@ -48,12 +61,11 @@ export default function Navbar() {
 
       {/* MOBILE MENU */}
       <div
-        className={`md:hidden transition-all duration-300 overflow-hidden ${
-          open ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`md:hidden transition-all duration-300 overflow-hidden ${open ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
+          }`}
       >
         <div className="px-6 pb-6 flex flex-col gap-5 text-sm text-gray-300 bg-[#0B0F14] border-t border-[#1A1F26]">
-          
+
           <Link href="#about" onClick={() => setOpen(false)}>
             About
           </Link>
@@ -66,7 +78,7 @@ export default function Navbar() {
             Contact
           </Link>
 
-         
+
           <Link
             href="https://www.upwork.com/freelancers/champnow" target="upwork"
             className="mt-4 bg-[#F5B301] text-black py-3 rounded-lg font-medium text-center"
