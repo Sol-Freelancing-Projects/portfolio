@@ -22,10 +22,10 @@ export default function Navbar() {
         <Link href="#home" className="flex items-center gap-3">
 
           <Image
-            src="/assets/logo.png"
+            src="/assets/image-removebg-preview.png"
             alt="Champ logo"
-            width={28}
-            height={28}
+            width={100}
+            height={30}
           />
 
         </Link>
